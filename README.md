@@ -12,15 +12,15 @@ Auto generating tokens
     _ = Task.Run(captchaFactory.Start);
     
     //Do your stuff
-    while (this.Enabled) {
-		var token = captchaFactory.RetrieveToken(Easy_Captcha.Enum.GetMethod.First);
+    while (this.Enabled) 
+    {
+        var token = captchaFactory.RetrieveToken(Easy_Captcha.Enum.GetMethod.First);
     
-	    if (!string.IsNullOrEmpty(token)){
-		    await MethodThatUsesCaptcha(token);
-	    }
+        if (!string.IsNullOrEmpty(token))
+	        await MethodThatUsesCaptcha(token);
 
-		await Task.Delay(2500;
-	}
+        await Task.Delay(2500;
+    }
     
     //Stop generating captchas
     captchaFactory.Stop();    
